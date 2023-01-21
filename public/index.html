@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+
+
+<body>
+    <div class="container">
+		<h1>Data Diri</h1>
+		<hr />
+		<div class="data">
+		  <table></table>
+		</div>
+	</div>
+    <script>
+		const table = document.querySelector("table");
+  
+		async function aliya() {
+		  const res = await fetch("/api/biodata");
+		  const value = await res.json();
+  
+		  for (let data in value) {
+			const tr = document.createElement("tr");
+			const th = document.createElement("th");
+			const td = document.createElement("td");
+			const isi = document.createElement("td");
+			th.textContent = value[data][0];
+			td.textContent = value[data][1];
+			isi.textContent = value[data][2];
+  
+			tr.appendChild(th);
+			tr.appendChild(td);
+			tr.appendChild(isi);
+			table.appendChild(tr);
+		  }
+		}
+  
+		aliya();
+                </script>
+
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 41.1rem;
+    background-color: #A6BB8D;
+}
+
+
+h1, td, th{
+    color:#243763;
+}
+
+h1, td, th {
+    text-align: start;
+}
+
+td, th {
+    padding: 10px;
+}
+
+.container {
+    background-color: #4E6C50;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+
+
+img{
+    width: 15.7%;
+    border-radius: 4px;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: #F5EDCE;
+}
+
+tr:hover {
+    background-color: rgb(13, 71, 52);
+}
